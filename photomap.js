@@ -14,15 +14,16 @@
  */
 function createPhotoMap () {
   // URL of a Google Sheets spreadsheet output as CSV
-  var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSuESp280YE8_PokNYJSK_V3zxGh7ZJlDqMNeliCoz1kt6q2ii7lRovZ-yMlEFY2n6rhUu3vOpnvFGx/pub?gid=0&single=true&output=csv';
+  var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1ZrS47se7CF3Ni2AduvyM0iekzsTnFIJTKHY2NtHwKHV3S-qO0_Meo62M5e0KvSREdFX4inh6cZet/pub?gid=0&single=true&output=csv';
   
   // create map object with center lat/lon and zoom level
-  var map = L.map('map').setView([30.44, -91.187], 13);
+  var map = L.map('map').setView([30.476955230766755, -90.067696635815], 13);
+    // 30.476955230766755, -90.067696635815
   
   // create basemap object. See examples at https://leaflet-extras.github.io/leaflet-providers/preview/
-  var basemap = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
+  var basemap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   	maxZoom: 16,
-  	attribution: 'USGS'
+  	attribution: 'OpenStreetMap'
   }).addTo(map);
   
   // use Papa Parse (papaparse.com) to get the Google Sheets CSV
