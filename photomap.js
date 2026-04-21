@@ -17,7 +17,7 @@ function createPhotoMap () {
   var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1ZrS47se7CF3Ni2AduvyM0iekzsTnFIJTKHY2NtHwKHV3S-qO0_Meo62M5e0KvSREdFX4inh6cZet/pub?gid=0&single=true&output=csv';
   
   // create map object with center lat/lon and zoom level
-  var map = L.map('map').setView([30.476955, -90.067697], 15);
+  var map = L.map('map').setView([30.476955, -90.067697], 14);
     // 30.476955230766755, -90.067696635815
   
   // create basemap object. See examples at https://leaflet-extras.github.io/leaflet-providers/preview/
