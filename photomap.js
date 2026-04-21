@@ -42,11 +42,7 @@ function createPhotoMap () {
       for (row in csv.data) {
         place = csv.data[row];
         marker = L.marker([place.lat, place.long])
-          .bindTooltip(place.name, {
-              permanent: false,
-              direction: 'bottom', 
-              offset: [0, 20]
-          }) // show labels by default
+          .bindTooltip(place.name, {permanent: false}) // show labels by default
           .addTo(markersLayer);
         marker.properties = {
           name: place.name,
